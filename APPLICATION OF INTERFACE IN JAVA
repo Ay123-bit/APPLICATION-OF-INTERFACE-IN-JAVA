@@ -1,0 +1,23 @@
+//INPUT
+interface Animal{
+  void sound();
+ default void legs(){
+    System.out.println("Every animal has four legs");
+  }
+}
+class Cow implements Animal{
+  @Override
+ public void sound(){
+    System.out.println("Moooooo.....");
+  }
+}
+public class AbsClass{
+  public static void main(String[] args){
+    Cow s = new Cow();
+    s.sound();
+    s.legs();
+  }
+}
+//OUTPUT
+Moooooo.....
+Every animal has four legs
